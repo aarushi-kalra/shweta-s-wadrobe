@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shweta’s Wardrobe | Women’s Clothing, Dilli Haat Janakpuri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#e6185f; --magenta:#b5106f; --saffron:#ff8a00; --marigold:#ffc400;
+  --teal:#00a6a6; --indigo:#2b1a6b; --cream:#fff6e0; --ink:#2a0d2e;
+  --band: repeating-linear-gradient(90deg,var(--pink) 0 40px,var(--saffron) 40px 80px,var(--marigold) 80px 120px,var(--teal) 120px 160px,var(--indigo) 160px 200px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:'Yatra One','Poppins',serif;font-weight:400;line-height:1.15}
+.band{height:14px;background:var(--band)}
+
+/* HERO */
+.hero{position:relative;text-align:center;color:#fff;padding:88px 20px 110px;
+  background:
+   radial-gradient(circle at 20% 20%,rgba(255,196,0,.55),transparent 40%),
+   radial-gradient(circle at 85% 80%,rgba(0,166,166,.5),transparent 45%),
+   linear-gradient(135deg,var(--magenta),var(--pink) 45%,var(--saffron));
+  overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;opacity:.14;
+  background-image:radial-gradient(circle,#fff 2px,transparent 3px),radial-gradient(circle,#fff 1px,transparent 2px);
+  background-size:38px 38px,19px 19px;background-position:0 0,9px 9px}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:46px;background:var(--cream);
+  -webkit-mask:radial-gradient(circle at 23px 0,transparent 22px,#000 23px) 0 0/46px 46px repeat-x;
+          mask:radial-gradient(circle at 23px 0,transparent 22px,#000 23px) 0 0/46px 46px repeat-x}
+.hero>*{position:relative;z-index:1}
+.badge{display:inline-block;background:var(--marigold);color:var(--indigo);font-weight:600;padding:8px 22px;border-radius:50px;
+  border:2px dashed var(--indigo);font-size:.95rem;box-shadow:0 6px 0 rgba(43,26,107,.35)}
+.hero h1{font-size:clamp(2.8rem,9vw,6rem);margin:26px 0 10px;text-shadow:3px 3px 0 var(--indigo),6px 6px 0 rgba(0,0,0,.18);letter-spacing:1px;
+  animation:rise .9s cubic-bezier(.2,.9,.3,1) both}
+.hero p.tag{font-size:clamp(1.05rem,2.6vw,1.4rem);max-width:640px;margin:0 auto 34px;font-weight:500}
+@keyframes rise{from{opacity:0;transform:translateY(40px) scale(.96)}to{opacity:1;transform:none}}
+
+.btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:15px 34px;border-radius:50px;transition:transform .2s,box-shadow .2s}
+.btn.primary{background:var(--marigold);color:var(--indigo);box-shadow:0 7px 0 var(--indigo)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid #fff;box-shadow:0 7px 0 rgba(0,0,0,.25)}
+.btn:hover{transform:translateY(-4px)}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 var(--indigo)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--indigo);outline-offset:3px}
+
+/* SECTIONS */
+section{padding:76px 20px}
+.wrap{max-width:1080px;margin:0 auto}
+.title{text-align:center;margin-bottom:48px}
+.title h2{font-size:clamp(2rem,5vw,3.2rem);color:var(--magenta)}
+.title .rule{width:170px;height:10px;margin:14px auto 0;border-radius:10px;background:var(--band)}
+.title p{max-width:560px;margin:14px auto 0}
+
+/* COLLECTION */
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:26px}
+.grid .card{flex:0 0 calc((100% - 78px)/4)}
+@media(max-width:960px){.grid .card{flex-basis:calc((100% - 52px)/3)}}
+@media(max-width:700px){.grid .card{flex-basis:calc((100% - 26px)/2)}}
+@media(max-width:480px){.grid .card{flex-basis:100%}}
+.card{position:relative;border-radius:22px 22px 70px 22px;padding:34px 26px 38px;color:#fff;min-height:250px;
+  display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;transition:transform .25s}
+.card:hover{transform:translateY(-8px) rotate(-1deg)}
+.card::before{content:"";position:absolute;top:-40px;right:-40px;width:150px;height:150px;border-radius:50%;
+  border:14px solid rgba(255,255,255,.25);box-shadow:0 0 0 14px rgba(255,255,255,.12)}
+.card .ico{font-size:2.8rem;position:absolute;top:24px;left:26px}
+.card h3{font-size:1.6rem;margin-bottom:6px}
+.card p{font-size:.93rem;opacity:.95}
+.c1{background:linear-gradient(150deg,#e6185f,#b5106f)}
+.c2{background:linear-gradient(150deg,#ff8a00,#e6185f)}
+.c3{background:linear-gradient(150deg,#00a6a6,#2b1a6b)}
+.c4{background:linear-gradient(150deg,#ffc400,#ff8a00);color:var(--indigo)}
+.c5{background:linear-gradient(150deg,#2b1a6b,#b5106f)}
+.c6{background:linear-gradient(150deg,#00a6a6,#7bd83a)}
+.c7{background:linear-gradient(150deg,#e6185f,#ffc400)}
+
+/* WHY */
+.why{background:var(--indigo);color:#fff;position:relative}
+.why .title h2{color:var(--marigold)}
+.why::before,.why::after{content:"";position:absolute;left:0;right:0;height:14px;background:var(--band)}
+.why::before{top:0}.why::after{bottom:0}
+.pills{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.pill{background:rgba(255,255,255,.08);border:2px solid var(--marigold);border-radius:60px;padding:14px 28px;font-weight:500}
+.pill:nth-child(2n){border-color:var(--pink)}
+.pill:nth-child(3n){border-color:var(--teal)}
+
+/* VISIT */
+.visit{background:var(--cream)}
+.ticket{max-width:760px;margin:0 auto;background:#fff;border-radius:26px;overflow:hidden;
+  box-shadow:0 0 0 6px var(--pink),0 0 0 12px var(--marigold),0 0 0 18px var(--teal),0 28px 50px rgba(43,26,107,.3)}
+.ticket header{background:linear-gradient(90deg,var(--magenta),var(--saffron));color:#fff;text-align:center;padding:26px 16px}
+.ticket header h3{font-size:2rem}
+.rows{padding:12px 34px 34px}
+.row{display:flex;gap:18px;align-items:center;padding:20px 0;border-bottom:2px dashed #f2c7a5}
+.row:last-of-type{border-bottom:0}
+.row .e{flex:none;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:1.6rem;color:#fff;background:var(--pink)}
+.row:nth-child(2) .e{background:var(--teal)}
+.row:nth-child(3) .e{background:var(--saffron)}
+.row:nth-child(4) .e{background:var(--indigo)}
+.row small{display:block;color:var(--magenta);font-weight:600}
+.row strong{font-size:1.25rem}
+.row a{color:var(--ink);text-decoration:none}
+.row a:hover{color:var(--pink)}
+.call{display:block;text-align:center;margin:8px 34px 34px;padding:16px;border-radius:50px;text-decoration:none;color:#fff;font-weight:600;font-size:1.15rem;
+  background:linear-gradient(90deg,var(--pink),var(--saffron));box-shadow:0 7px 0 var(--magenta);transition:transform .2s}
+.call:hover{transform:translateY(-3px)}
+
+
+.map{max-width:760px;margin:56px auto 0;border-radius:26px;overflow:hidden;background:#fff;
+  box-shadow:0 0 0 6px var(--indigo),0 0 0 12px var(--pink),0 24px 44px rgba(43,26,107,.28)}
+.map iframe{display:block;width:100%;height:380px;border:0}
+.map .bar{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:16px 24px;background:linear-gradient(90deg,var(--indigo),var(--magenta));color:#fff}
+.map .bar a{background:var(--marigold);color:var(--indigo);font-weight:600;text-decoration:none;padding:10px 24px;border-radius:50px}
+footer{background:var(--ink);color:#f5dcc0;text-align:center;padding:30px 20px 38px;font-size:.92rem}
+footer b{font-family:'Yatra One',serif;font-weight:400;color:var(--marigold);font-size:1.3rem}
+
+html{-webkit-text-size-adjust:100%}
+img,iframe{max-width:100%}
+@media(max-width:700px){
+  section{padding:56px 22px}
+  .hero{padding:60px 20px 90px}
+  .badge{font-size:.82rem;padding:7px 16px}
+  .hero h1{margin:20px 0 10px}
+  .btns{flex-direction:column;align-items:stretch;max-width:320px;margin:0 auto}
+  .btn{text-align:center;padding:14px 24px}
+  .title{margin-bottom:34px}
+  .grid{gap:16px}
+  .grid .card{min-height:230px;padding:28px 20px 30px}
+  .card h3{font-size:1.35rem}
+  .pills{gap:10px}
+  .pill{padding:10px 18px;font-size:.92rem}
+  .ticket{box-shadow:0 0 0 4px var(--pink),0 0 0 8px var(--marigold),0 0 0 12px var(--teal),0 18px 34px rgba(43,26,107,.28);margin:0 8px}
+  .ticket header h3{font-size:1.6rem}
+  .rows{padding:6px 20px 22px}
+  .row{gap:14px;padding:16px 0}
+  .row .e{width:46px;height:46px;font-size:1.3rem}
+  .row strong{font-size:1.02rem;display:block;overflow-wrap:anywhere}
+  .call{margin:6px 20px 24px;font-size:1.05rem}
+  .map{margin:44px 8px 0;box-shadow:0 0 0 4px var(--indigo),0 0 0 8px var(--pink),0 18px 34px rgba(43,26,107,.25)}
+  .map iframe{height:300px}
+  .map .bar{flex-direction:column;align-items:stretch;text-align:center;padding:14px 16px}
+  .map .bar a{padding:12px 20px}
+  .band{height:10px}
+}
+@media(max-width:480px){
+  .grid .card{flex-basis:100%;min-height:210px}
+  .card .ico{font-size:2.4rem}
+}
+@media(max-width:360px){
+  section{padding:48px 16px}
+  .row{align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="band"></div>
+
+<header class="hero">
+  <span class="badge">Dilli Haat, Janakpuri · Shop No. 100</span>
+  <h1>Shweta’s Wardrobe</h1>
+  <p class="tag">Rang, kadhai aur kaarigari. Women’s clothing and jewellery in the colours of Jaipur. Home delivery available.</p>
+  <div class="btns">
+    <a class="btn primary" href="tel:+918860427389">Call 8860427389</a>
+    <a class="btn ghost" href="#collection">See what we stock</a>
+  </div>
+</header>
+
+<section id="collection">
+  <div class="wrap">
+    <div class="title">
+      <h2>Our collection</h2>
+      <div class="rule"></div>
+      <p>Everything a woman’s wardrobe needs, plus festive attire in season, under one roof at Dilli Haat.</p>
+    </div>
+    <div class="grid">
+      <article class="card c1"><span class="ico" aria-hidden="true">👗</span><h3>Kurtis</h3><p>Printed, embroidered and block-print kurtis for everyday and festive days.</p></article>
+      <article class="card c2"><span class="ico" aria-hidden="true">🌸</span><h3>Suit sets</h3><p>Salwar and palazzo sets with dupattas in bright, bold colours.</p></article>
+      <article class="card c3"><span class="ico" aria-hidden="true">📿</span><h3>Jewellery</h3><p>Jhumkas, necklaces, bangles and oxidised sets to match every outfit.</p></article>
+      <article class="card c4"><span class="ico" aria-hidden="true">💃</span><h3>Lehengas</h3><p>Flared skirts and lehengas with Rajasthani mirror and gota details.</p></article>
+      <article class="card c5"><span class="ico" aria-hidden="true">🧣</span><h3>Dupattas</h3><p>Bandhani, leheriya and embroidered dupattas to finish any outfit.</p></article>
+      <article class="card c7"><span class="ico" aria-hidden="true">🪔</span><h3>Festive specials</h3><p>Special attire available in festive seasons: Diwali, Karwa Chauth, weddings and more.</p></article>
+      <article class="card c6"><span class="ico" aria-hidden="true">✨</span><h3>Western wear</h3><p>Tops, skirts and co-ords for a modern, easy look.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="title">
+      <h2>Why shop with Shweta</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="pills">
+      <span class="pill">Vibrant Jaipuri colours</span>
+      <span class="pill">Handpicked styles</span>
+      <span class="pill">Home delivery available</span>
+      <span class="pill">Festive season attire</span>
+      <span class="pill">Fair prices</span>
+      <span class="pill">Order on call or visit the shop</span>
+      <span class="pill">New arrivals often</span>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="title">
+      <h2>Come visit us</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="ticket">
+      <header><h3>Shweta’s Wardrobe</h3><div>Women’s clothing</div></header>
+      <div class="rows">
+        <div class="row"><span class="e" aria-hidden="true">📍</span><div><small>Find us at</small><strong>Shop No. 100, Dilli Haat, Janakpuri, New Delhi</strong></div></div>
+        <div class="row"><span class="e" aria-hidden="true">📞</span><div><small>Call or WhatsApp</small><strong><a href="tel:+918860427389">8860427389</a></strong></div></div>
+        <div class="row"><span class="e" aria-hidden="true">🛍️</span><div><small>What we sell</small><strong>Women’s clothing, jewellery and festive attire</strong></div></div>
+        <div class="row"><span class="e" aria-hidden="true">🛵</span><div><small>How to buy</small><strong>Home delivery available. Place your order on call or visit the shop.</strong></div></div>
+      </div>
+      <a class="call" href="tel:+918860427389">Call to order</a>
+    </div>
+    <div class="map">
+      <iframe title="Map showing Dilli Haat, Janakpuri" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Dilli+Haat+Janakpuri+New+Delhi&amp;output=embed"></iframe>
+      <div class="bar"><span>Shop No. 100, Dilli Haat, Janakpuri</span><a href="https://share.google/W7F5hnPHrndQnZZMW" target="_blank" rel="noopener">Open in Google Maps</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>Shweta’s Wardrobe</b><br>
+  Shop No. 100, Dilli Haat, Janakpuri · 8860427389
+</footer>
+<div class="band"></div>
+</body>
+</html>
